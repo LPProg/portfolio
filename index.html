@@ -1,11 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jane Doe - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
-    
+<body class="bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white dark:bg-gray-800 shadow-lg z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-bold text-gray-800 dark:text-white">JD</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <i class="fas fa-moon text-gray-600 dark:text-gray-300"></i>
+                    </button>
+                    <button id="menu-btn" class="md:hidden">
+                        <i class="fas fa-bars text-gray-600 dark:text-gray-300"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden absolute w-full bg-white dark:bg-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">About</a>
+                <a href="#skills" class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Skills</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Projects</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-16 px-6">
+        <div data-aos="zoom-in" class="container mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+                Jane Doe
+            </h1>
+            <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">Full Stack Developer & UI Designer</p>
+            <button class="bg-blue-500 text-white px-8 py-3 rounded-full hover:bg-blue-600 transition">
+                View My Work
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white dark:bg-gray-800 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 dark:text-white">About Me</h2>
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
+                    <img src="assets/images/profile.jpg" alt="Profile" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Hi! I’m Manuel López Rébora, a passionate developer from Málaga, born in 1993. Since I was a child, I’ve been fascinated by video games and programming, which led me to pursue a career in software development. This journey brought me to specialize in cross-platform app development, where I continue to grow and learn every day.
+                        In addition to my work as a developer, I am also a multi-adventure instructor, which allows me to bring creativity and problem-solving skills into everything I do. I’m always updating my knowledge and skills, staying on top of the latest technologies and trends in the industry.
+                        I’m excited about the future and the opportunities to create innovative and meaningful digital experiences!
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
+                            <i class="fas fa-code text-blue-500 text-2xl mb-2"></i>
+                            <h3 class="font-bold dark:text-white">Web Development</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">MERN Stack, REST APIs, GraphQL</p>
+                        </div>
+                        <div class="p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
+                            <i class="fas fa-palette text-blue-500 text-2xl mb-2"></i>
+                            <h3 class="font-bold dark:text-white">UI Design</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">Figma, Adobe XD, Prototyping</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-white dark:bg-gray-800 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 dark:text-white">Skills</h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="skill-card p-6 bg-gray-100 dark:bg-gray-700 rounded-lg" data-aos="fade-up">
+                    <div class="h-2 bg-gray-300 dark:bg-gray-600 rounded-full mb-4">
+                        <div class="h-full bg-blue-500 rounded-full w-4/5"></div>
+                    </div>
+                    <h3 class="font-bold dark:text-white">JavaScript</h3>
+                    <p class="text-gray-600 dark:text-gray-300">85%</p>
+                </div>
+                <div class="skill-card p-6 bg-gray-100 dark:bg-gray-700 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-2 bg-gray-300 dark:bg-gray-600 rounded-full mb-4">
+                        <div class="h-full bg-blue-500 rounded-full w-3/4"></div>
+                    </div>
+                    <h3 class="font-bold dark:text-white">React</h3>
+                    <p class="text-gray-600 dark:text-gray-300">75%</p>
+                </div>
+                <!-- Add more skills following the same pattern -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 dark:text-white">My Projects</h2>
+            <div class="flex justify-center mb-8 space-x-4">
+                <button class="project-filter px-4 py-2 rounded-full bg-blue-500 text-white" data-filter="all">All</button>
+                <button class="project-filter px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700" data-filter="web">Web</button>
+                <button class="project-filter px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700" data-filter="design">Design</button>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="project-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition" data-category="web" data-aos="zoom-in">
+                    <img src="assets/images/project1.jpg" alt="Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 dark:text-white">E-commerce Platform</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Full-stack e-commerce solution with React and Node.js</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-blue-100 dark:bg-gray-700 text-blue-600 dark:text-blue-400 rounded text-sm">React</span>
+                            <span class="px-2 py-1 bg-blue-100 dark:bg-gray-700 text-blue-600 dark:text-blue-400 rounded text-sm">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more project cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white dark:bg-gray-800 px-6">
+        <div class="container mx-auto max-w-2xl">
+            <h2 class="text-3xl font-bold text-center mb-12 dark:text-white">Get In Touch</h2>
+            <form id="contactForm" class="space-y-6">
+                <div>
+                    <label class="block text-gray-600 dark:text-gray-300 mb-2">Name</label>
+                    <input type="text" name="name" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600">
+                </div>
+                <div>
+                    <label class="block text-gray-600 dark:text-gray-300 mb-2">Email</label>
+                    <input type="email" name="email" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600">
+                </div>
+                <div>
+                    <label class="block text-gray-600 dark:text-gray-300 mb-2">Message</label>
+                    <textarea name="message" class="w-full px-4 py-2 border rounded-lg h-32 dark:bg-gray-700 dark:border-gray-600"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-6">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://github.com/LPProg" class="hover:text-blue-400" target="_blank">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/manuel-lopez-rebora/" class="hover:text-blue-400" target="_blank">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="https://www.threads.net/@manulr.dev" class="hover:text-blue-400" target="_blank">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+            </div>
+            <p class="text-gray-400">&copy; 2025 Manuel López Rébora. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 150
+        });
+    </script>
 </body>
 </html>
