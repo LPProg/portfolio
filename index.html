@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jane Doe - Portfolio</title>
+    <title>Manuel Lopez - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,7 +14,7 @@
     <nav class="fixed w-full bg-white dark:bg-gray-800 shadow-lg z-50">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <a href="#" class="text-2xl font-bold text-gray-800 dark:text-white">JD</a>
+                <a href="#" class="text-2xl font-bold text-gray-800 dark:text-white">ML</a>
                 <div class="hidden md:flex space-x-8">
                     <a href="#home" class="nav-link">Home</a>
                     <a href="#about" class="nav-link">About</a>
@@ -89,28 +89,85 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-16 bg-white dark:bg-gray-800 px-6">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12 dark:text-white">Skills</h2>
-            <div class="grid md:grid-cols-4 gap-6">
-                <div class="skill-card p-6 bg-gray-100 dark:bg-gray-700 rounded-lg" data-aos="fade-up">
-                    <div class="h-2 bg-gray-300 dark:bg-gray-600 rounded-full mb-4">
-                        <div class="h-full bg-blue-500 rounded-full w-4/5"></div>
+<section id="skills" class="py-16 bg-white dark:bg-gray-800 px-6">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12 dark:text-white">Skills & Technologies</h2>
+        
+        <div class="flex flex-wrap justify-center gap-8">
+            <!-- Programming Languages Column -->
+            <div class="w-full md:w-auto" data-aos="fade-up">
+                <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
+                    <h3 class="text-lg font-bold mb-4 dark:text-gray-200">Languages</h3>
+                    <div class="flex flex-col gap-2">
+                        <div class="skill-item flex items-center p-3 bg-white dark:bg-gray-800 rounded-md">
+                            <i class="fab fa-js-square text-2xl text-yellow-400 w-8"></i>
+                            <span class="text-sm ml-2 dark:text-gray-300">JavaScript</span>
+                        </div>
+                        <div class="skill-item flex items-center p-3 bg-white dark:bg-gray-800 rounded-md">
+                            <i class="fab fa-python text-2xl text-blue-400 w-8"></i>
+                            <span class="text-sm ml-2 dark:text-gray-300">Python</span>
+                        </div>
+                        <!-- Add more languages -->
                     </div>
-                    <h3 class="font-bold dark:text-white">HTML5</h3>
-                    <p class="text-gray-600 dark:text-gray-300">85%</p>
                 </div>
-                <div class="skill-card p-6 bg-gray-100 dark:bg-gray-700 rounded-lg" data-aos="fade-up" data-aos-delay="100">
-                    <div class="h-2 bg-gray-300 dark:bg-gray-600 rounded-full mb-4">
-                        <div class="h-full bg-blue-500 rounded-full w-3/4"></div>
+            </div>
+
+            <!-- Frontend Column -->
+            <div class="w-full md:w-auto" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
+                    <h3 class="text-lg font-bold mb-4 dark:text-gray-200">Frontend</h3>
+                    <div class="flex flex-col gap-2">
+                        <div class="skill-item flex items-center p-3 bg-white dark:bg-gray-800 rounded-md">
+                            <i class="fab fa-react text-2xl text-blue-500 w-8"></i>
+                            <span class="text-sm ml-2 dark:text-gray-300">React</span>
+                        </div>
+                        <div class="skill-item flex items-center p-3 bg-white dark:bg-gray-800 rounded-md">
+                            <i class="fab fa-vuejs text-2xl text-green-500 w-8"></i>
+                            <span class="text-sm ml-2 dark:text-gray-300">Vue.js</span>
+                        </div>
+                        <!-- Add more frontend skills -->
                     </div>
-                    <h3 class="font-bold dark:text-white">Javascript</h3>
-                    <p class="text-gray-600 dark:text-gray-300">75%</p>
                 </div>
-                <!-- Add more skills following the same pattern -->
+            </div>
+
+            <!-- Backend Column -->
+            <div class="w-full md:w-auto" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
+                    <h3 class="text-lg font-bold mb-4 dark:text-gray-200">Backend</h3>
+                    <div class="flex flex-col gap-2">
+                        <div class="skill-item flex items-center p-3 bg-white dark:bg-gray-800 rounded-md">
+                            <i class="fab fa-node-js text-2xl text-green-600 w-8"></i>
+                            <span class="text-sm ml-2 dark:text-gray-300">Node.js</span>
+                        </div>
+                        <div class="skill-item flex items-center p-3 bg-white dark:bg-gray-800 rounded-md">
+                            <i class="fas fa-server text-2xl text-purple-500 w-8"></i>
+                            <span class="text-sm ml-2 dark:text-gray-300">Express</span>
+                        </div>
+                        <!-- Add more backend skills -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools Column -->
+            <div class="w-full md:w-auto" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
+                    <h3 class="text-lg font-bold mb-4 dark:text-gray-200">Tools</h3>
+                    <div class="flex flex-col gap-2">
+                        <div class="skill-item flex items-center p-3 bg-white dark:bg-gray-800 rounded-md">
+                            <i class="fab fa-docker text-2xl text-blue-300 w-8"></i>
+                            <span class="text-sm ml-2 dark:text-gray-300">Docker</span>
+                        </div>
+                        <div class="skill-item flex items-center p-3 bg-white dark:bg-gray-800 rounded-md">
+                            <i class="fab fa-aws text-2xl text-orange-500 w-8"></i>
+                            <span class="text-sm ml-2 dark:text-gray-300">AWS</span>
+                        </div>
+                        <!-- Add more tools -->
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Projects Section -->
     <section id="projects" class="py-16 px-6">
